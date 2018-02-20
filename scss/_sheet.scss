@@ -1,0 +1,25 @@
+$color: #ff0000;
+$pad: 10;
+@mixin radiusbr {
+	border-radius: 10px;
+}
+ 
+ul {
+	li{
+		background-color: $color;
+		padding: $pad+5px;
+		padding-left: $pad*10px;
+		margin: $pad+1px;
+		@include radiusbr;
+		&:hover {
+			background: lighten( $color, 5% );
+			color: darken(#dd4141, 30%);
+		}
+		&:nth-child(2n) {
+			color: #fff;
+			height: 100px * $pad/5;
+			
+		}
+	}
+}
+
